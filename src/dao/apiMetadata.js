@@ -415,6 +415,21 @@ const deleteAPIMetadata = async (orgID, apiID, t) => {
     }
 }
 
+const getAPIIdFromReferenceId = async (referenceID) => {
+    try {
+        const api = await APIMetadata.findOne({
+            attributes: ['API_ID'],
+            where: {
+                REFERENCE_ID: referenceID
+            }
+        });
+        return api ? api.API_ID : "";
+    } catch (error) {
+        throw new Sequelize.DatabaseError(error); 
+    }
+};
+
+
 const updateAPIMetadata = async (orgID, apiID, apiMetadata, t) => {
 
     const apiInfo = apiMetadata.apiInfo;
@@ -692,6 +707,7 @@ module.exports = {
     getAPIFile,
     deleteAPIFile,
     getAPIId,
+    getAPIIdFromReferenceId,
     getAPIMetadataByCondition,
     searchAPIMetadata
 };
