@@ -134,11 +134,9 @@ if (config.mode === constants.DEV_MODE) {
     app.use(constants.ROUTE.DEFAULT, customContent);
 }
 
-console.log(config.serverCerts.pathToCert);
-
-const certPath = path.join(config.serverCerts.pathToCert);
-const keyPath = path.join(config.serverCerts.pathToPK);
-const caPath = path.join(config.serverCerts.pathToCA);
+const certPath = path.join(process.cwd(), config.serverCerts.pathToCert);
+const keyPath = path.join(process.cwd(), config.serverCerts.pathToPK);
+const caPath = path.join(process.cwd(), config.serverCerts.pathToCA);
 const serverCert = fs.readFileSync(certPath);
 const serverKey = fs.readFileSync(keyPath);
 const caCert = fs.readFileSync(caPath);
