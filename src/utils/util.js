@@ -277,7 +277,7 @@ const invokeApiRequest = async (req, method, url, headers, body) => {
             rejectUnauthorized: false,
         });
     } else {
-        const certPath = path.join(process.cwd(), config.controlPlane.pathToCertificate);
+        const certPath = path.join(config.controlPlane.pathToCertificate);
         httpsAgent = new https.Agent({
             ca: fs.readFileSync(certPath),
             rejectUnauthorized: true,
