@@ -8,9 +8,9 @@
     "pathToCertificate": "../api-developer-portal/conf/security/client-truststore.pem"
   },
   "serverCerts": {
-    "pathToCert": "../api-developer-portal/conf/security/client-truststore.pem",
-    "pathToPK": "../api-developer-portal/conf/security/private-key.pem",
-    "pathToCA": "../api-developer-portal/conf/security/client-truststore.pem"
+    "pathToCert": "./configs/client-truststore.pem",
+    "pathToPK": "./configs/private-key.pem",
+    "pathToCA": "./configs/client-truststore.pem"
   },
   "db": {
     "username": "postgres",
