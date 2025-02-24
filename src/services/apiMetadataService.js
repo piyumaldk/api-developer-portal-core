@@ -214,7 +214,6 @@ const deleteAPIMetadata = async (req, res) => {
 };
 
 const createAPITemplate = async (req, res) => {
-
     try {
         const { orgId, apiId } = req.params;
         let imageMetadata = JSON.parse(req.body.imageMetadata);
@@ -264,7 +263,6 @@ const createAPITemplate = async (req, res) => {
 };
 
 const updateAPITemplate = async (req, res) => {
-
     try {
         const { orgId, apiId } = req.params;
         const imageMetadata = JSON.parse(req.body.imageMetadata);
@@ -278,7 +276,7 @@ const updateAPITemplate = async (req, res) => {
         const contentPath = path.join(extractPath, apiContentFileName, "content");
         const imagesPath = path.join(extractPath, apiContentFileName, "images");
         // Verify directories exist
-        try {
+        try {      
             await fs.access(contentPath);
             await fs.access(imagesPath);
         } catch (err) {
@@ -310,6 +308,10 @@ const updateAPITemplate = async (req, res) => {
         console.error(`${constants.ERROR_MESSAGE.API_CONTENT_UPDATE_ERROR}, ${error}`);
         util.handleError(res, error);
     }
+};
+
+const setDefaultAPITemplate = async (req, res) => {
+    console.log("TODO: setDefaultAPITemplate");  
 };
 
 const getAPIFile = async (req, res) => {
@@ -379,4 +381,5 @@ module.exports = {
     deleteAPIFile,
     getMetadataListFromDB,
     getMetadataFromDB,
+    setDefaultAPITemplate
 };

@@ -38,7 +38,7 @@ router.put('/organizations/:orgId/identityProvider', validateAuthentication(cons
 router.get('/organizations/:orgId/identityProvider', validateAuthentication(constants.SCOPES.ADMIN), adminService.getIdentityProvider);
 router.delete('/organizations/:orgId/identityProvider', validateAuthentication(constants.SCOPES.ADMIN), adminService.deleteIdentityProvider);
 
-const upload = multer({ dest: '../.tmp/' });
+const upload = multer({ dest: '../tmp2/' });
 router.post('/organizations/:orgId/layout', validateAuthentication(constants.SCOPES.ADMIN), upload.single('file'), adminService.createOrgContent);
 router.put('/organizations/:orgId/layout', validateAuthentication(constants.SCOPES.ADMIN), upload.single('file'), adminService.updateOrgContent);
 router.get('/organizations/:orgId/layout', devportalService.getOrgContent);
@@ -67,6 +67,13 @@ router.post('/apis', enforceSecuirty(constants.SCOPES.DEVELOPER), apiDefinition.
 router.get('/apis', enforceSecuirty(constants.SCOPES.DEVELOPER), apiMetadataService.getAllAPIMetadata); // s2s applied
 router.put('/apis/:apiId', enforceSecuirty(constants.SCOPES.DEVELOPER), apiDefinition.single('apiDefinition'), apiMetadataService.updateAPIMetadata); // s2s applied
 router.delete('/apis/:apiId', enforceSecuirty(constants.SCOPES.DEVELOPER), apiMetadataService.deleteAPIMetadata); // s2s applied
+
+router.put('/apis/:apiId/template', enforceSecuirty(constants.SCOPES.DEVELOPER), apiZip.single('apiContent'), apiMetadataService.updateAPITemplate); // s2s applied
+router.delete('/apis/:apiId/template', enforceSecuirty(constants.SCOPES.DEVELOPER), apiMetadataService.setDefaultAPITemplate); // s2s applied
+
+router.put('/layout', enforceSecuirty(constants.SCOPES.ADMIN), upload.single('file'), adminService.updateOrgContent); // s2s applied
+router.delete('/layout', enforceSecuirty(constants.SCOPES.ADMIN), adminService.setDefaultOrgContent); // s2s applied
+
 
 router.post('/subscriptions', ensureAuthenticated, devportalController.subscribeAPI);
 router.delete('/subscriptions/:subscriptionId', ensureAuthenticated, devportalController.unsubscribeAPI);

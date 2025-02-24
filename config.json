@@ -59,14 +59,7 @@
   "subscriberRole": "Internal/subscriber",
   "superAdminRole": "superAdmin",
   "authenticatedPages": [
-    "/portal/*/edit",
-    "/portal",
-    "/*/configure",
-    "/*/applications",
-    "/*/applications/*",
-    "/*/api/*",
-    "/*/myapis",
-    "/*/myapis/*"
+    
   ],
   "authorizedPages": [
     "/*/applications",
@@ -74,6 +67,14 @@
     "/*/configure",
     "/portal/*/edit",
     "/portal",
+    "/*/api/*",
+    "/*/myapis",
+    "/*/myapis/*",
+    "/portal/*/edit",
+    "/portal",
+    "/*/configure",
+    "/*/applications",
+    "/*/applications/*",
     "/*/api/*",
     "/*/myapis",
     "/*/myapis/*"

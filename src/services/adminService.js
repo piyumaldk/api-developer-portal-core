@@ -251,7 +251,7 @@ const createOrgContent = async (req, res) => {
 
     const orgId = req.params.orgId;
     const zipPath = req.file.path;
-    const extractPath = path.join(process.cwd(), '..', '.tmp', orgId);
+    const extractPath = path.join(process.cwd(), '..', 'tmp2', orgId);
     await util.unzipFile(zipPath, extractPath);
     try {
         const files = await util.readFilesInDirectory(extractPath, orgId, req.protocol, req.get('host'));
@@ -289,10 +289,9 @@ const createContent = async (filePath, fileName, fileContent, fileType, orgId) =
 };
 
 const updateOrgContent = async (req, res) => {
-
     const orgId = req.params.orgId;
     const zipPath = req.file.path;
-    const extractPath = path.join(process.cwd(), '..', '.tmp', orgId);
+    const extractPath = path.join(process.cwd(), '..', 'tmp2', orgId);
     await util.unzipFile(zipPath, extractPath);
     const files = await util.readFilesInDirectory(extractPath, orgId, req.protocol, req.get('host'));
     try {
@@ -349,6 +348,10 @@ const deleteOrgContent = async (req, res) => {
         console.error(`${constants.ERROR_MESSAGE.ORG_CONTENT_DELETE_ERROR}, ${error}`);
         util.handleError(res, error);
     }
+};
+
+const setDefaultOrgContent = async (req, res) => {
+    console.log("TODO: setDefaultOrgContent");
 };
 
 
@@ -519,5 +522,5 @@ module.exports = {
     getProviders,
     getAllProviders,
     deleteProvider,
-
+    setDefaultOrgContent
 };
