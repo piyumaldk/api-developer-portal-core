@@ -1,6 +1,6 @@
 {
   "port": 3000,
-  "pathToContent": "../api-developer-portal/src/",
+  "pathToContent": "./api-developer-portal/src/",
   "mode": "development",
   "controlPlane": {
     "url": "https://127.0.0.1:9443/api/am/devportal/v3",
