@@ -251,7 +251,7 @@ const createOrgContent = async (req, res) => {
 
     const orgId = req.params.orgId;
     const zipPath = req.file.path;
-    const extractPath = path.join(process.cwd(), '..', '.tmp', orgId);
+    const extractPath = path.join(process.cwd(), '..', 'tmp', orgId);
     await util.unzipFile(zipPath, extractPath);
     try {
         const files = await util.readFilesInDirectory(extractPath, orgId, req.protocol, req.get('host'));
@@ -291,7 +291,7 @@ const createContent = async (filePath, fileName, fileContent, fileType, orgId) =
 const updateOrgContent = async (req, res) => {
     const orgId = req.params.orgId;
     const zipPath = req.file.path;
-    const extractPath = path.join(process.cwd(), '..', '.tmp', orgId);
+    const extractPath = path.join(process.cwd(), '..', 'tmp', orgId);
     await util.unzipFile(zipPath, extractPath);
     const files = await util.readFilesInDirectory(extractPath, orgId, req.protocol, req.get('host'));
     try {

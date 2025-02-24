@@ -38,7 +38,7 @@ router.put('/organizations/:orgId/identityProvider', validateAuthentication(cons
 router.get('/organizations/:orgId/identityProvider', validateAuthentication(constants.SCOPES.ADMIN), adminService.getIdentityProvider);
 router.delete('/organizations/:orgId/identityProvider', validateAuthentication(constants.SCOPES.ADMIN), adminService.deleteIdentityProvider);
 
-const upload = multer({ dest: '../.tmp/' });
+const upload = multer({ dest: '../tmp/' });
 router.post('/organizations/:orgId/layout', validateAuthentication(constants.SCOPES.ADMIN), upload.single('file'), adminService.createOrgContent);
 router.put('/organizations/:orgId/layout', validateAuthentication(constants.SCOPES.ADMIN), upload.single('file'), adminService.updateOrgContent);
 router.get('/organizations/:orgId/layout', devportalService.getOrgContent);
