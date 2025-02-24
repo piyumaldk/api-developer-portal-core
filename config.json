@@ -5,12 +5,12 @@
   "controlPlane": {
     "url": "https://127.0.0.1:9443/api/am/devportal/v3",
     "disableCertValidation": true,
-    "pathToCertificate": "/client-truststore.pem"
+    "pathToCertificate": "./client-truststore.pem"
   },
   "serverCerts": {
-    "pathToCert": "/client-truststore.pem",
+    "pathToCert": "./client-truststore.pem",
     "pathToPK": "./private-key.pem",
-    "pathToCA": "/client-truststore.pem"
+    "pathToCA": "./client-truststore.pem"
   },
   "db": {
     "username": "postgres",
