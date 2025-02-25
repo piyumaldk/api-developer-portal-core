@@ -1,0 +1,9 @@
+[{
+    "apiName": "AccommodationAPI",
+    "applicationName": "DefaultApplication",
+    "throttlingTier": "Unlimited"
+}, {
+    "apiName": "CountriesAPI",
+    "applicationName": "New Application",
+    "throttlingTier": "Gold"
+}]

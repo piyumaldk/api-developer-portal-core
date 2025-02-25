@@ -1,0 +1,116 @@
+[
+    {
+        "apiInfo": {
+            "apiName": "AccommodationAPI",
+            "apiCategory": "Travel",
+            "tags": [
+                "leisure",
+                "activities",
+                "reservations"
+            ],
+            "authenticate": true,
+            "apiDescription": "API for managing accommodations and reservations in a specified city",
+            "apiVersion": "1.1.0",
+            "apiType": "REST",
+            "openApiDefinition": {
+                "info": {
+                    "title": "Accommodation API",
+                    "description": "API for managing accommodations and reservations in a specified city",
+                    "version": "1.1.0"
+                }
+            },
+            "apiImageMetadata": {
+                "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/hotel-availability.jpeg"
+            }
+        }
+    },
+    {
+        "apiInfo": {
+            "apiName": "CountriesAPI",
+            "orgName": "GlobalData",
+            "apiCategory": "Geography",
+            "tags": [
+                "countries",
+                "capitals",
+                "population",
+                "continents"
+            ],
+            "apiDescription": "API for retrieving information about countries, their capitals, population, and other geographical data.",
+            "apiVersion": "2.5.0",
+            "apiType": "GraphQL",
+            "additionalProperties": {
+                "documentationUrl": "https://globaldata.com/docs/countries-api"
+            },
+            "apiImageMetadata": {
+                "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/attractions.jpeg"
+            }
+        },
+        "throttlingPolicies": [
+            {
+                "type": "rateLimit",
+                "policyName": "Basic Rate Limit",
+                "description": "Allows up to 1000 requests per day."
+            }
+        ],
+        "serverUrl": {
+            "sandboxUrl": "https://countries.trevorblades.com/graphql",
+            "productionUrl": "https://countries.trevorblades.com/graphql"
+        }
+    },
+    {
+        "apiInfo": {
+            "apiName": "NavigationAPI",
+            "orgName": "ACME",
+            "apiCategory": "Transportation",
+            "tags": [
+                "transport",
+                "activities",
+                "reservations"
+            ],
+            "apiDescription": "API for retrieving navigation data, including routes, GPS coordinates, traffic updates, and real-time directions.",
+            "apiVersion": "3.0.1",
+            "apiType": "AsyncAPI",
+            "additionalProperties": {
+                "documentationUrl": "https://acme.com/docs/navigation-api"
+            },
+            "apiImageMetadata": {
+                "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/navigation-mini.jpeg"
+            }
+        },
+        "throttlingPolicies": [
+            {
+                "type": "rateLimit",
+                "policyName": "Basic Rate Limit",
+                "description": "Limits requests to 500 per hour."
+            }
+        ],
+        "serverUrl": {
+            "sandboxUrl": "https://sandbox.acme.com/api/v1/navigation",
+            "productionUrl": "https://api.acme.com/v1/navigation"
+        }
+    },
+    {
+        "apiInfo": {
+            "apiName": "LeisureActivitiesAPI",
+            "apiCategory": "Travel",
+            "tags": [
+                "leisure",
+                "activities",
+                "reservations"
+            ],
+            "apiDescription": "API for retrieving information about famous attractions in various cities",
+            "apiVersion": "2.0.0",
+            "apiType": "REST",
+            "openApiDefinition": {
+                "info": {
+                    "title": "Famous Attractions API",
+                    "description": "API for retrieving information about famous attractions in various cities",
+                    "version": "2.0.0"
+                }
+            },
+            "apiImageMetadata": {
+                "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/leisure.jpeg"
+            }
+        }
+    }
+]

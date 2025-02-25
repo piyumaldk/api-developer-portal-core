@@ -1,0 +1,32 @@
+[
+    {
+        "orgId": "4454545",
+        "orgName": "ACME",
+        "businessOwner": "Joe",
+        "businessOwnerContact": "0112345678",
+        "businessOwnerEmail": "joe@gmail.com",
+        "devPortalURLIdentifier": "ACME",
+        "roleClaimName": "roles",
+        "groupsClaimName": "groups",
+        "organizationClaimName": "organizationID",
+        "organizationIdentifier": "ACME",
+        "adminRole": "admin",
+        "subscriberRole": "subscriber",
+        "superAdminRole": "superAdmin"
+    },
+    {
+        "orgId": "4454545",
+        "orgName": "DEPT",
+        "businessOwner": "Jane",
+        "businessOwnerContact": "0112345678",
+        "businessOwnerEmail": "joe@gmail.com",
+        "devPortalURLIdentifier": "DEPT",
+        "roleClaimName": "roles",
+        "groupsClaimName": "groups",
+        "organizationClaimName": "organizationID",
+        "organizationIdentifier": "DEPT",
+        "adminRole": "admin",
+        "subscriberRole": "subscriber",
+        "superAdminRole": "superAdmin"
+    }
+]

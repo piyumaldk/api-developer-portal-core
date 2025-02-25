@@ -1,0 +1,10 @@
+[
+    {
+        "name": "MuleSoft",
+        "providerURL": "https://anypoint.mulesoft.com"
+    },
+    {
+        "name": "APIGEE",
+        "providerURL": "http://apigee.com"
+    }
+]

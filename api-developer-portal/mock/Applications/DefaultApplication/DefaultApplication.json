@@ -1,0 +1,17 @@
+{
+    "applicationId": "49231188-5d7e-46e1-9651-7e7905d4d836",
+    "name": "DefaultApplication",
+    "throttlingPolicy": "Unlimited",
+    "description": "This is the default application",
+    "tokenType": "JWT",
+    "status": "APPROVED",
+    "groups": [],
+    "subscriptionCount": 1,
+    "keys": [],
+    "attributes": {},
+    "subscriptionScopes": [],
+    "owner": "admin",
+    "hashEnabled": false,
+    "createdTime": "1731993412405",
+    "updatedTime": "1731993412405"
+}

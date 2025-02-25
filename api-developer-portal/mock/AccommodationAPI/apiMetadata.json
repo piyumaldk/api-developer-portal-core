@@ -1,0 +1,39 @@
+{
+  "apiInfo": {
+    "apiName": "AccommodationAPI",
+    "orgName": "ACME",
+    "apiCategory": "Transportation",
+    "tags": [
+      "leisure",
+      "activities",
+      "reservations"
+    ],
+    "apiDescription": "API for managing accommodations and reservations in a specified city",
+    "apiVersion": "1.1.0",
+    "apiType": "REST",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
+    },
+    "apiImageMetadata": {
+        "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/hotel-availability.jpeg"
+    }
+  },
+  "subscriptionPolicies": [
+    {
+      "policyName": "Gold"
+    },
+    {
+      "policyName": "Silver"
+    },
+    {
+      "policyName": "Bronze"
+    },
+    {
+      "policyName": "Unlimited"
+    }
+  ],
+  "serverUrl": {
+    "sandboxUrl": "https://accommodation.api.sandbox.abc.com",
+    "productionUrl": "https://accommodation.api.abc.com"
+  }
+}

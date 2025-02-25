@@ -1,0 +1,42 @@
+{
+  "apiInfo": {
+    "apiName": "CountriesAPI",
+    "orgName": "ACME",
+    "apiCategory": "Geography",
+    "tags": ["countries", "capitals", "population", "continents"],
+    "apiDescription": "API for retrieving information about countries, their capitals, population, and other geographical data.",
+    "apiVersion": "2.5.0",
+    "apiType": "GraphQL",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
+    },
+    "apiImageMetadata": {
+      "api-icon": "https://devportal-content.s3.amazonaws.com/ACBOrganization/resources/images/attractions.jpeg"
+    }
+  },
+  "throttlingPolicies": [
+    {
+      "type": "rateLimit",
+      "policyName": "Basic Rate Limit",
+      "description": "Allows up to 1000 requests per day."
+    }
+  ],
+  "subscriptionPolicies": [
+    {
+      "policyName": "Gold"
+    },
+    {
+      "policyName": "Silver"
+    },
+    {
+      "policyName": "Bronze"
+    },
+    {
+      "policyName": "Unlimited"
+    }
+  ],
+  "serverUrl": {
+    "sandboxUrl": "https://countries.trevorblades.com/graphql",
+    "productionUrl": "https://countries.trevorblades.com/graphql"
+  }
+}
