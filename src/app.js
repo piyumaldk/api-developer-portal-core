@@ -16,6 +16,7 @@
  * under the License.
  */
 /* eslint-disable no-undef */
+require('./init');
 const express = require('express');
 const { engine } = require('express-handlebars');
 const passport = require('passport');
